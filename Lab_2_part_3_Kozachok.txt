@@ -1,0 +1,39 @@
+using System;
+
+namespace Yuliya
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите первую букву страны(a-e)");
+            char bukva = Convert.ToChar(Console.ReadLine());
+            string stolica="nun";
+            switch (bukva)
+            {
+                case 'a':
+            stolica="Баку";
+              break;
+                case 'b':
+            stolica="Минск";
+              break;
+                case 'c':
+            stolica="Апиа";
+              break;
+          default:
+               if (bukva == 'd')
+                {
+                  stolica="Копенгаген";
+                }
+                else if (bukva == 'e')
+                {
+                    stolica="Каир";
+                } 
+              break;
+            }
+          
+
+            Console.WriteLine("Столица страны - "+stolica);
+        }
+    }
+}

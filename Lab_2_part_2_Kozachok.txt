@@ -1,0 +1,36 @@
+using System;
+
+namespace Yuliya
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double y, i=4;
+            Console.WriteLine("Введите значения коэфициентов");
+            Console.WriteLine("a = ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("b = ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("c = ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("d = ");
+            int d = Convert.ToInt32(Console.ReadLine());
+            for (int x = 5; x < 15; x++)            
+            {
+                if (x<10)
+                {
+                    y= Math.Tan(x/i + a) - Math.Log10(b*i + 7);
+                    Console.WriteLine("<10");
+                }
+                else
+                {
+                    y=c*Math.Pow(Math.Pow(x,2) + d*Math.Pow(i,1.2),1/i);
+                    Console.WriteLine(">=10");
+                }
+                Console.WriteLine("y["+x+"] = "+Math.Round(y,2));
+            }
+
+        }
+    }
+}

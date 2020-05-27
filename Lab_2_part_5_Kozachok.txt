@@ -1,0 +1,40 @@
+using System;
+
+namespace Yuliya
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Выбирите действие:");
+            Console.WriteLine("1 - возведение в степень");
+            Console.WriteLine("2 - квадратный корень от числа");
+            Console.WriteLine("3 - вычислить проценты");
+
+            int count = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите число:");
+            switch (count)
+            {
+                case 1:
+            double number = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите степень:");
+            double step = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Результат вычислений - "+Math.Round(Math.Pow(number,step)));
+              break;
+                case 2:
+            double sqrt = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Результат вычислений - "+Math.Round(Math.Sqrt(sqrt)));
+
+              break;
+                case 3:
+            double value = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите проценты:");
+            double percent = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Результат вычислений - "+Math.Round((value*percent)/100));
+              break;
+          default:
+              break;
+            }
+        }
+    }
+}
